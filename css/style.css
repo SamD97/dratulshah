@@ -1082,8 +1082,10 @@ figure {
   margin: 15px;
 }
 #footer .footer-brand img {
-  height: 200px;
-  margin-left: 45px;
+  height: 150px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 90px;
 }
 
 .btn {
