@@ -1,0 +1,18 @@
+title: Atul Shah
+url: dratulshah.com
+baseurl: 
+
+author: Saumil Shah
+description: Plastic and Cosmetic surgeon in India.
+
+#include: ['_pages']
+
+collections:
+  Weight-Management:
+    output: true
+  Specialties:
+    output: true
+
+markdown: kramdown
+kramdown:
+  input: GFM

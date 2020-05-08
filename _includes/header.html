@@ -1,0 +1,43 @@
+<div id="fh5co-header">
+	<header id="fh5co-header-section">
+		<div class="container">
+			<div class="nav-header">
+				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+				<h1 id="fh5co-logo">
+					<a href="index.html">
+						<img src="{{ "/assets/img/logo.png" | relative_url }}" height="50px">
+						&ensp;Atul<span>Shah</span>
+					</a>
+				</h1>
+				<!-- START #fh5co-menu-wrap -->
+
+				<nav id="fh5co-menu-wrap" role="navigation">
+<!-- <ul class="sf-menu" id="fh5co-primary-menu">
+	{%- assign nodes = site.pages | sort: "order" -%}
+	{% for node in nodes %}
+	{% if node.url contains "404" or node.url contains ".xml" %}
+	{% else %}
+	<li class="{% if page.url == node.url %}active{% endif%}">
+		<a class="{% if node.haschild %}fh5c0-sub-ddwon{% endif %}" href="{{ node.url | relative_url }}">{{ node.title }}</a>
+		{% if node.haschild %}
+		<ul class="fh5co-sub-menu">
+			{% assign children = site.collections | where: "label", node.title | First %}
+			{{ children }}
+			{% for child in site.collections.children %}
+			<li><a href="{{ child.url }}">{{ child.title }}</a></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	</li>
+	{% endif %}
+	{% endfor %}
+</ul> -->
+					{%- assign documents = site.pages | where: "isDoc", true | sort: "order" -%}
+					{%- include list-child.html dir="" docs=documents maxLevel=2 -%}
+				</nav>
+
+			</div>
+		</div>
+	</header>		
+</div>
+<!-- end:fh5co-header -->
