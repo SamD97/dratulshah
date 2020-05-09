@@ -5,6 +5,9 @@ baseurl:
 author: Saumil Shah
 description: Plastic and Cosmetic surgeon in India.
 
+include: ['weight-management', 'specialties']
+exclude: ['README.md']
+
 defaults:
   -
     scope:
@@ -12,16 +15,21 @@ defaults:
       type: "pages"
 
     values:
-      isDoc: true # allows quick extraction from site.pages
+      categories: "none"
+  -
+    scope:
+      path: "/weight-management"
+      type: "pages"
 
-include: ['Weight-Management', 'Specialties']
-permalink: pretty
+    values:
+      categories: "weight-management"
+  -
+    scope:
+      path: "/specialties"
+      type: "pages"
 
-#collections:
-#  Weight-Management:
-#    output: true
-#  Specialties:
-#    output: true
+    values:
+      categories: "specialties"
 
 markdown: kramdown
 kramdown:

@@ -26,9 +26,9 @@ __ Liquid Exception: Nesting too deep __
     {%- endif -%}
 {%- endfor -%}
 
-<ul {% if level == 0 %}class="sf-menu" id="fh5co-primary-menu"{% else %}class="fh5co-sub-menu"{% endif %}>
+<ul {% if level == 0 %}class="sf-menu" id="fh5co-primary-menu"{% else %}{% if siblings.size > 1 %}class="fh5co-sub-menu"{% endif %}{% endif %}>
 {% for p in siblings %}
-    <li {% if p.url == page.url %}class="active"{% endif %}><a href="{{p.url}}">{{ p.title }}</a>
+    <li {% if p.url == page.url %}class="active"{% endif %}><a href="{{p.url}}">{{ p.title }}{{ siblings.size }}</a>
     {% if nextLevel <= maxLevel %}
       {% include list-child.html dir=p.dir docs=allDocs level=nextLevel maxLevel=maxLevel %}
     {% endif %}

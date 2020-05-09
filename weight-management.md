@@ -1,6 +1,7 @@
 ---
-title: Weight-Management
-layout: default
+title: Weight Management
+layout: parent
+parent: none
 order: 2
 ---
 
